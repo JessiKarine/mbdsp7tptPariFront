@@ -15,19 +15,19 @@ import {MatCardModule} from '@angular/material/card';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
-
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { PariComponent } from './pari/pari.component';
 
 const routes:Routes = [
- /* {
+  {
     // indique que http://localhost:4200 sans rien ou avec un "/" à la fin
     // doit afficher le composant AssignmentsComponent (celui qui affiche la liste)
     path:"",
-    component:AssignmentsComponent
+    component: PariComponent
   },
-  {
+ /* {
     // idem avec  http://localhost:4200/home
     path:"home",
     component:AssignmentsComponent
@@ -48,14 +48,8 @@ const routes:Routes = [
 ]
 @NgModule({
   declarations: [
-   /* AppComponent,
-    AssignmentsComponent,
-    RenduDirective,
-    NonRenduDirective,
-    AssignmentDetailComponent,
-    AddAssignmentComponent,
-    EditAssigmentComponent*/
-  ],
+    AppComponent,
+    PariComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
