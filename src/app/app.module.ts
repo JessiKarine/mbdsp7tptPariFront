@@ -19,6 +19,9 @@ import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { PariComponent } from './pari/pari.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { MenuComponent } from './menu/menu.component';
 
 const routes:Routes = [
   {
@@ -49,7 +52,10 @@ const routes:Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    PariComponent],
+    PariComponent,
+    HeaderComponent,
+    FooterComponent,
+    MenuComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
