@@ -22,6 +22,8 @@ import { PariComponent } from './pari/pari.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MenuComponent } from './menu/menu.component';
+import { CalendrierComponent } from './calendrier/calendrier.component';
+import { ResultatComponent } from './resultat/resultat.component';
 
 const routes:Routes = [
   {
@@ -30,11 +32,10 @@ const routes:Routes = [
     path:"",
     component: PariComponent
   },
- /* {
-    // idem avec  http://localhost:4200/home
-    path:"home",
-    component:AssignmentsComponent
-  },
+  {
+    path:"resultat",
+    component:ResultatComponent
+  },/*
   {
     path:"add",
     component:AddAssignmentComponent
@@ -55,7 +56,9 @@ const routes:Routes = [
     PariComponent,
     HeaderComponent,
     FooterComponent,
-    MenuComponent],
+    MenuComponent,
+    CalendrierComponent,
+    ResultatComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
