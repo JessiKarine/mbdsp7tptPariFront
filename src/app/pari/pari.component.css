@@ -1,0 +1,114 @@
+.banner {
+    margin-bottom: 20px;
+}
+.header-caroussel {
+    border-style: none;
+    padding: 0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.header-caroussel .carousel {
+    width: 100%;
+}
+.match-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.match-equipe .match-equipe-logo {
+    width: 50px;
+}
+.match-equipe .match-equipe-logo img {
+    width: 100%;
+    margin-bottom: 5px;
+}
+.match-equipe {
+    text-align: center;
+}
+.match-time-container {
+    display: flex;
+}
+.match-time-container::before { 
+    content: "-----------";
+    align-self: center;
+}
+.match-time-container::after { 
+    content: "-----------";
+    align-self: center;
+}
+.match-time {
+    background-color: rgb(228, 209, 209);
+    width: 75px;
+    height: 75px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    border-radius: 75px ;
+}
+
+.match-pari-container {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.match-pari-point {
+    background-color: gainsboro;
+    width: 100px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.match-pari-cta {
+    display:flex;
+    flex:1;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(28, 102, 151);
+    height: inherit;
+    position: relative;
+    z-index : 1;
+    box-shadow: 0 0 25px rgb(0 0 0 / 50%);
+    cursor: pointer;
+    text-decoration: none;
+    color : white ; 
+}
+.match-pari-cta::before { 
+      transform: skew(24deg);
+      top : 0 ; 
+      left : 0 ; 
+      bottom : 0;
+}
+.match-pari-cta::after {
+    transform: skew(-24deg);
+    top: 0 ;
+    right: 0 ;
+    bottom: 0;
+  
+}
+.match-pari-cta::before , .match-pari-cta::after {
+    display: block;
+    content: '';
+    background-color: rgb(28, 102, 151);
+    transform-origin: bottom;
+    position: absolute;
+    width:22px;
+    z-index : -1;
+}
+.sponsor-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    
+}
+.sponsor-container .sponsor {
+ width: 100px;
+}
+.sponsor-container .sponsor img {
+    width: 100%;
+}
