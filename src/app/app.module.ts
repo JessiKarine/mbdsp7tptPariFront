@@ -35,6 +35,10 @@ const routes:Routes = [
   {
     path:"resultat",
     component:ResultatComponent
+  },
+  {
+    path:"calendrier",
+    component:CalendrierComponent
   },/*
   {
     path:"add",

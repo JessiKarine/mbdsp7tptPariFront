@@ -4,9 +4,7 @@ declare var $ : any;
   selector: 'app-resultat',
   templateUrl: './resultat.component.html',
   styleUrls: [
-    './resultat.component.css',
-    '../../assets/vendors/fullcalendar/fullcalendar.css',
-    '../../assets/css/calendar.css']
+    './resultat.component.css']
 })
 export class ResultatComponent implements OnInit {
 

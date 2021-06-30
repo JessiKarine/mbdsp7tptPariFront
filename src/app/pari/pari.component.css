@@ -112,3 +112,6 @@
 .sponsor-container .sponsor img {
     width: 100%;
 }
+.about-container {
+    columns: 3;
+}

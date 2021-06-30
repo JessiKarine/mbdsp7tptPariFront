@@ -1,0 +1,26 @@
+.header-warning {
+    display: flex;
+    height: 50px;
+    background-color: WHITE;
+    text-align: center;
+    align-items: center;
+}
+.header-menu-container ul{
+   display: flex;
+   justify-content: space-between;
+   
+
+}
+.header-menu-container a {
+    display: flex;
+    flex: 1;
+}
+.header-menu-container li {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    padding:15px;
+    flex: 1;
+}
+
+
