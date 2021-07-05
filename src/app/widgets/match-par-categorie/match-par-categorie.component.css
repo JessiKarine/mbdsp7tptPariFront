@@ -1,0 +1,18 @@
+.categorie-header-box { 
+    display: flex;
+}
+.categorie-title-container { 
+    display: flex;
+}
+.categorie-icons { 
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    padding: 5px;
+    background: url(/assets/icons/flags-sprite.png) no-repeat 107.1446% 88.9362%;
+    background-size: 2438.1%;
+    flex-shrink: 0;
+}
+.categorie-icons:before { 
+    background-position: 19.1446% 42.56619%;
+}

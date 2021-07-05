@@ -1,0 +1,40 @@
+<div class="col-md-12">
+    <div class="content-box-header">
+        <div class="panel-title">{{match.idcategorie.valeur}}</div>
+    </div>
+    <div class="content-box-large box-with-header">
+      <div class="match-container">
+          <div class="match-equipe">
+              <div class="match-equipe-logo">
+                  <img src="/assets/images/logopsg.png" alt="">
+              </div>
+              <span>{{match.idequipe1.nom}}</span>
+              
+          </div>
+          <div class="match-time-container">
+              <div class="match-time">
+                  <span>{{match.date | date }}</span>
+                  <span>{{match.heure}}</span>
+              </div>
+          </div>
+          <div class="match-equipe">
+              <div class="match-equipe-logo">
+                  <img src="/assets/images/logoarsenal.png" alt="">
+              </div>
+              <span>{{match.idequipe2.nom}}</span>
+          </div>
+      </div>
+      <div class="match-pari-container">
+          <div class="match-pari-point">
+              <span>{{match.coteEquipe1}}</span>
+          </div>
+          <a class="match-pari-cta">
+              <span> Placer un pari</span>
+          </a>
+          <div class="match-pari-point">
+              <span>{{match.coteEquipe2}}</span>
+          </div>
+          
+      </div>
+  </div>
+</div>

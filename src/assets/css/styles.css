@@ -219,7 +219,7 @@ footer .copy{
 .content-box, .content-box-large {
    margin-bottom:30px;
    background:#fff;
-   border-radius:10px;
+   border-radius:2px;
    padding:10px;
    border-left:1px solid #eee;
    border-top:1px solid #eee;
@@ -241,8 +241,8 @@ footer .copy{
   min-height: 40px;
    font-size: 16px;
    background:#f5f5f5;
-   border-top-left-radius:5px;
-   border-top-right-radius:5px;
+   border-top-left-radius:2px;
+   border-top-right-radius:2px;
    padding:10px;
    border-left:1px solid #eee;
    border-top:1px solid #eee;

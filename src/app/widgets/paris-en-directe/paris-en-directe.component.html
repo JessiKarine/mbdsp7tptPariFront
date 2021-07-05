@@ -1,0 +1,21 @@
+<div class="col-md-12">
+    <div class="paris-container">
+        <div class="paris-title-box">
+            <div class="paris-title">
+                Title
+            </div>
+            <div class="paris-search-bar">
+                <input type="text" name="search" />
+            </div>
+        </div>
+        <div class="paris-categorie-box">
+            <div class="paris-categorie-live" [innerHTML] = "getLiveIcons() | htmlrender">
+            </div>
+            <div class="paris-categorie-liste"> 
+            </div>
+        </div>
+        <div class="paris-match-box">
+            <app-match-par-categorie></app-match-par-categorie>
+        </div>
+    </div>
+</div>

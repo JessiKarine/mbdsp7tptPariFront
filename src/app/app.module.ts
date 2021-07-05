@@ -24,6 +24,11 @@ import { FooterComponent } from './footer/footer.component';
 import { MenuComponent } from './menu/menu.component';
 import { CalendrierComponent } from './calendrier/calendrier.component';
 import { ResultatComponent } from './resultat/resultat.component';
+import { MatchComponent } from './widgets/match/match.component';
+import { PartenairesSportifComponent } from './widgets/partenaires-sportif/partenaires-sportif.component';
+import { ParisEnDirecteComponent } from './widgets/paris-en-directe/paris-en-directe.component';
+import { HtmlrenderPipe } from './pipe/htmlrender.pipe';
+import { MatchParCategorieComponent } from './widgets/match-par-categorie/match-par-categorie.component';
 
 const routes:Routes = [
   {
@@ -62,7 +67,12 @@ const routes:Routes = [
     FooterComponent,
     MenuComponent,
     CalendrierComponent,
-    ResultatComponent],
+    ResultatComponent,
+    MatchComponent,
+    PartenairesSportifComponent,
+    ParisEnDirecteComponent,
+    HtmlrenderPipe,
+    MatchParCategorieComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
