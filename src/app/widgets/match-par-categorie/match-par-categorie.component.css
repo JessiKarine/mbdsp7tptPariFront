@@ -1,13 +1,20 @@
+.match-categorie-container { 
+    margin-bottom : 10px ;
+}
 .categorie-header-box { 
     display: flex;
+    background-color: #eef4f8;
 }
 .categorie-title-container { 
     display: flex;
+    width : 20%;
+    justify-content: space-between;
+    align-items: center;
 }
 .categorie-icons { 
     display: inline-block;
-    width: 21px;
-    height: 21px;
+    width: 40px;
+    /*height: 21px; */
     padding: 5px;
     background: url(/assets/icons/flags-sprite.png) no-repeat 107.1446% 88.9362%;
     background-size: 2438.1%;
@@ -15,4 +22,75 @@
 }
 .categorie-icons:before { 
     background-position: 19.1446% 42.56619%;
+}
+.categorie-bet { 
+    display: flex;
+    flex : 1 ;
+}
+.categorie-bet-equipe { 
+    flex : 1 ;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.match-box {}
+.match-item { 
+    display: flex;
+    background: white;
+    border-right : 1px solid #eef4f8; 
+    padding : 5px ; 
+}
+
+.match-item .match-information { 
+    /*flex : 1 ;*/
+    width: 23%;
+    padding-right : 5px ; 
+    border-right : 1px solid #eef4f8;
+}
+.match-item:hover .equipe-liste-score .equipe-title-container .equipe-title > span:first-child { 
+    font-weight: 600;
+    color : rgb(0, 94, 202);
+    transition: all 0.3s;
+}
+.match-item .match-information .equipe-liste-score { 
+    display: flex;
+}
+.match-item .match-information .pinned-icon { 
+    width: 40px;
+}
+.match-item .equipe-liste-score .equipe-title-container { 
+    flex: 1;
+}
+.match-item .equipe-liste-score .equipe-title-container .equipe-title{ 
+    display: flex;
+    justify-content: space-between;
+}
+.match-item .match-bet { 
+    flex : 1 ;
+    display: flex;
+    border-right : 1px solid #eef4f8;
+}
+.match-item .match-bet .cote-equipe {
+    flex : 1;
+    display : flex ; 
+    justify-content:  center;
+    align-items: center;
+}
+.match-item .match-bet .cote-equipe span { 
+    padding : 7px  10px; 
+    background-color: #eef4f8;
+    font-size : 12px ; 
+    border-radius: 5px;
+    font-weight: lighter;
+    min-width: 50px ; 
+    text-align: center;
+    cursor : pointer ; 
+}
+
+.match-item .match-bet .cote-equipe span:hover { 
+    background-color: #bce6fd;
 }

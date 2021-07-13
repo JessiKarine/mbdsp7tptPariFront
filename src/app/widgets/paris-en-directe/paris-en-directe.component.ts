@@ -23,7 +23,6 @@ export class ParisEnDirecteComponent implements OnInit {
         test+='<rect class="cls-1" x="43.45" y="74.46" width="43.46" height="6.22"/>';
         test+='<rect class="cls-1" x="55.85" y="66.26" width="18.6" height="8.88"/>';
     test+='</svg>' ; 
-    return test ; 
-      
+    return test ;     
   }
 }

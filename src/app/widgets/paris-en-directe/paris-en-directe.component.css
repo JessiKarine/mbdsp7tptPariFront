@@ -22,4 +22,42 @@
     background-color: #1b5785 ;
     flex : 1 ;
     margin-left: 1px;
+    display: flex;
+}
+.paris-categorie-liste  .paris-categorie-item-scroller { 
+    width : 50px ; 
+}
+
+.paris-categorie-liste  .paris-categorie-item-container { 
+    flex : 1 ;    
+    display: flex;
+}
+.paris-categorie-item-container .paris-categorie-item { 
+    display: flex ;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding : 0 5px ; 
+    margin-right: 5px;
+    cursor: pointer;
+}
+.paris-categorie-item-container .paris-categorie-item.active { 
+    box-shadow: inset 0 -2px #7ba837;
+    filter : brightness(1.5);
+    transition : all 0.3s ; 
+}
+.paris-categorie-item-container .paris-categorie-item:hover { 
+    filter : brightness(1.5);
+    transition : all 0.3s ; 
+}
+.paris-categorie-item-container .paris-categorie-item .paris-categorie-item-icons { 
+    width : 20px ; 
+    margin-right: 10px;
+}
+.paris-categorie-item-container .paris-categorie-item .paris-categorie-item-icons img { 
+    width : 100% ; 
+}
+.paris-categorie-item-container .paris-categorie-item  .paris-categorie-item-name { 
+    color : #e0e0e0 ; 
+    text-transform: capitalize;
 }
