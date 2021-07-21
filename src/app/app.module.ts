@@ -27,6 +27,10 @@ import { PartenairesSportifComponent } from './widgets/partenaires-sportif/parte
 import { ParisEnDirecteComponent } from './widgets/paris-en-directe/paris-en-directe.component';
 import { HtmlrenderPipe } from './pipe/htmlrender.pipe';
 import { MatchParCategorieComponent } from './widgets/match-par-categorie/match-par-categorie.component';
+import { CalendrierComponent } from './pages/calendrier/calendrier/calendrier.component';
+import { AboutComponent } from './pages/about/about/about.component';
+import { ContactComponent } from './pages/contact/contact/contact.component';
+import { CalendrierFicheComponent } from './pages/calendrier/calendrier-fiche/calendrier-fiche.component';
 
 const routes:Routes = [
   {
@@ -34,7 +38,18 @@ const routes:Routes = [
     // doit afficher le composant AssignmentsComponent (celui qui affiche la liste)
     path:"",
     component: PariComponent
-  }/*
+  },
+  {
+    path:"calendrier",
+    component:CalendrierComponent
+  },{
+    path:"about",
+    component:AboutComponent
+  },
+  {
+    path:"contact",
+    component:ContactComponent
+  },/*
   {
     path:"add",
     component:AddAssignmentComponent
@@ -60,7 +75,11 @@ const routes:Routes = [
     PartenairesSportifComponent,
     ParisEnDirecteComponent,
     HtmlrenderPipe,
-    MatchParCategorieComponent],
+    MatchParCategorieComponent,
+    CalendrierComponent,
+    AboutComponent,
+    ContactComponent,
+    CalendrierFicheComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
