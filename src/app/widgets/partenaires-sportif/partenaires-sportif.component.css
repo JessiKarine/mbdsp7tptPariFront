@@ -11,3 +11,9 @@
 .sponsor-container .sponsor img {
     width: 100%;
 }
+.content-box-header {
+    background-color: #4988b9;
+    color: white;
+    border: none;
+    margin-bottom: 0.5px;
+}

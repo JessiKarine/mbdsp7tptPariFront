@@ -18,12 +18,10 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
-import { PariComponent } from './pari/pari.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { MenuComponent } from './menu/menu.component';
-import { CalendrierComponent } from './calendrier/calendrier.component';
-import { ResultatComponent } from './resultat/resultat.component';
+import { PariComponent } from './pages/pari/pari.component';
+import { HeaderComponent } from './widgets/header/header.component';
+import { FooterComponent } from './widgets/footer/footer.component';
+import { MenuComponent } from './widgets/menu/menu.component';
 import { MatchComponent } from './widgets/match/match.component';
 import { PartenairesSportifComponent } from './widgets/partenaires-sportif/partenaires-sportif.component';
 import { ParisEnDirecteComponent } from './widgets/paris-en-directe/paris-en-directe.component';
@@ -36,15 +34,7 @@ const routes:Routes = [
     // doit afficher le composant AssignmentsComponent (celui qui affiche la liste)
     path:"",
     component: PariComponent
-  },
-  {
-    path:"resultat",
-    component:ResultatComponent
-  },
-  {
-    path:"calendrier",
-    component:CalendrierComponent
-  },/*
+  }/*
   {
     path:"add",
     component:AddAssignmentComponent
@@ -66,8 +56,6 @@ const routes:Routes = [
     HeaderComponent,
     FooterComponent,
     MenuComponent,
-    CalendrierComponent,
-    ResultatComponent,
     MatchComponent,
     PartenairesSportifComponent,
     ParisEnDirecteComponent,

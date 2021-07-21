@@ -1,0 +1,11 @@
+//sponsors
+,
+    "nom": "Chevrolet",
+    "description" : "",
+    "image" : "chevrolet.jpg"
+//resultat
+date : Date,
+    heure : String,
+    idmatch : Object,
+    pointequipe1 : Number,
+    pointequipe2 : Number

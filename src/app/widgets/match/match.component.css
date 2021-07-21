@@ -91,3 +91,9 @@
     width:22px;
     z-index : -1;
 }
+.content-box-header {
+    background-color: #4988b9;
+    color:white;
+    border: none;
+    margin-bottom: 1px;
+}

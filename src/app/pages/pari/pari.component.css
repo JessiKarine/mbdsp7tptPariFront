@@ -13,3 +13,9 @@
 .about-container {
     columns: 3;
 }
+.rule-container {
+    color: white;
+}
+.about-container h4{
+    color: rgb(28, 102, 151);
+}
