@@ -1,12 +1,12 @@
 <div class="col-md-12">
     <div class="content-box-header">
-        <div class="panel-title">{{match.idcategorie.valeur}}</div>
+        <div class="panel-title">{{match.idcategorie.nom}}</div>
     </div>
     <div class="content-box-large box-with-header">
       <div class="match-container">
           <div class="match-equipe">
               <div class="match-equipe-logo">
-                  <img src="/assets/images/logopsg.png" alt="">
+                  <img src="/assets/images/{{match.idequipe1.image}}" alt="">
               </div>
               <span>{{match.idequipe1.nom}}</span>
               
@@ -19,7 +19,7 @@
           </div>
           <div class="match-equipe">
               <div class="match-equipe-logo">
-                  <img src="/assets/images/logoarsenal.png" alt="">
+                  <img src="/assets/images/{{match.idequipe2.image}}" alt="">
               </div>
               <span>{{match.idequipe2.nom}}</span>
           </div>
