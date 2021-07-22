@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-match-par-categorie',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./match-par-categorie.component.css']
 })
 export class MatchParCategorieComponent implements OnInit {
-
+  @Input() match;
   constructor() { }
 
   ngOnInit(): void {

@@ -48,5 +48,6 @@ export class PariComponent implements OnInit {
       this.categorieList = data as Categorie[];
     });
   }
+  
 
 }

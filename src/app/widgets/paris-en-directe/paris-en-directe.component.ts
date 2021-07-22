@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Categorie } from 'src/app/models/categorie';
+import { Match } from 'src/app/models/match';
+import { MatchService } from 'src/app/service/match.service';
 
 @Component({
   selector: 'app-paris-en-directe',
@@ -8,9 +10,11 @@ import { Categorie } from 'src/app/models/categorie';
 })
 export class ParisEnDirecteComponent implements OnInit {
   @Input() categorieList;
-  constructor() { }
+  matchListPaginer = null;
+  constructor(private matchService:MatchService) { }
 
   ngOnInit(): void {
+    this.getMatchPaginer();
   }
   getLiveIcons = () => { 
      let test = ' <svg id=Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.33 80.68">';
@@ -25,5 +29,15 @@ export class ParisEnDirecteComponent implements OnInit {
         test+='<rect class="cls-1" x="55.85" y="66.26" width="18.6" height="8.88"/>';
     test+='</svg>' ; 
     return test ;     
+  }
+
+  getMatchPaginer() {
+    this.matchService.getMatchPaginer()
+    .subscribe(data => {
+      console.log("données reçues match paginer");
+      console.log(data.docs);
+      this.matchListPaginer = data.docs as Match[];
+    });
+    
   }
 }

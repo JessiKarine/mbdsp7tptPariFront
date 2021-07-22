@@ -28,6 +28,11 @@ export class MatchService {
     return this.http.get<Categorie[]>(this.uriorcl+'/Categories');
   }
 
+  getMatchPaginer():Observable<any> {
+  console.log("Dans le service tous les matchs avec pagination...")
+  return this.http.get<Match[]>(this.uri+'/getMatch');
+  }
+
 
 
 }

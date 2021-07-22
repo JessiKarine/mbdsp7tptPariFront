@@ -14,7 +14,15 @@
             <div class="paris-categorie-liste"> 
                 <div class="paris-categorie-item-scroller"></div>
                 <div class="paris-categorie-item-container">
-                    <div class="paris-categorie-item active" *ngFor="let categorie of categorieList">
+                    <div class="paris-categorie-item active" >
+                        <div class="paris-categorie-item-icons" >
+                            <img src="assets/icons/tous.png" alt="tous"/>
+                        </div>
+                        <div class="paris-categorie-item-name">
+                           Tous
+                        </div>
+                    </div>   
+                    <div class="paris-categorie-item" *ngFor="let categorie of categorieList">
                         <div class="paris-categorie-item-icons" >
                             <img src="assets/icons/{{categorie.image}}" alt="{{categorie.nom}}"/>
                         </div>
@@ -27,7 +35,7 @@
             </div>
         </div>
         <div class="paris-match-box">
-            <app-match-par-categorie></app-match-par-categorie>
+            <app-match-par-categorie *ngFor="let match of matchListPaginer" [match]="match"></app-match-par-categorie>
         </div>
     </div>
 </div>
