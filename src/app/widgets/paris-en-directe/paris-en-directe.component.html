@@ -14,20 +14,12 @@
             <div class="paris-categorie-liste"> 
                 <div class="paris-categorie-item-scroller"></div>
                 <div class="paris-categorie-item-container">
-                    <div class="paris-categorie-item active">
-                        <div class="paris-categorie-item-icons">
-                            <img src="assets/icons/Premier_League_Logo_white.png" alt="premier league"/>
+                    <div class="paris-categorie-item active" *ngFor="let categorie of categorieList">
+                        <div class="paris-categorie-item-icons" >
+                            <img src="assets/icons/{{categorie.image}}" alt="{{categorie.nom}}"/>
                         </div>
                         <div class="paris-categorie-item-name">
-                            premier league
-                        </div>
-                    </div>
-                    <div class="paris-categorie-item">
-                        <div class="paris-categorie-item-icons">
-                            <img src="assets/icons/LaLiga_white.png" alt="la Liga"/>
-                        </div>
-                        <div class="paris-categorie-item-name">
-                            Liga
+                            {{categorie.nom}}
                         </div>
                     </div>
                 </div> 

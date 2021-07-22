@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Categorie } from 'src/app/models/categorie';
 
 @Component({
   selector: 'app-paris-en-directe',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./paris-en-directe.component.css']
 })
 export class ParisEnDirecteComponent implements OnInit {
-
+  @Input() categorieList;
   constructor() { }
 
   ngOnInit(): void {
