@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class PartenairesSportifComponent implements OnInit {
 
-  @Input() partenairesList ; 
+  @Input() sponsorsList ; 
   constructor() { }
 
   ngOnInit(): void {

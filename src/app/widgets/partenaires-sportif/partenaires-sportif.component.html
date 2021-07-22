@@ -3,24 +3,9 @@
         <div class="panel-title ">Sponsoring</div>
     </div>
     <div class="content-box-large box-with-header sponsor-container">
-      <div class="sponsor">
-          <img src="/assets/images/sponsors/chevrolet.jpg" alt="chevrolet"/>
+      <div class="sponsor" *ngFor="let sponsors of sponsorsList">
+          <img src="/assets/images/sponsors/{{sponsors.image}}" alt="{{sponsors.nom}}"/>
       </div>
-      <div class="sponsor">
-          <img src="/assets/images/sponsors/fedex.png" alt="fedex"/>
-      </div>
-      <div class="sponsor">
-          <img src="/assets/images/sponsors/beinsport.jpg" alt="beinsport"/>
-      </div>
-      <div class="sponsor">
-          <img src="/assets/images/sponsors/redbull.jpg" alt="redbull"/>
-      </div>
-      <div class="sponsor">
-          <img src="/assets/images/sponsors/samsung.png" alt="samsung"/>
-      </div>
-      <div class="sponsor">
-          <img src="/assets/images/sponsors/valvoline.jpg" alt="valvoline"/>
-      </div>
-
+     
   </div>
 </div>
