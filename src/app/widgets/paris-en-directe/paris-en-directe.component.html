@@ -2,7 +2,7 @@
     <div class="paris-container">
         <div class="paris-title-box">
             <div class="paris-title">
-                Resultats des matchs
+                Liste des matchs en cours
             </div>
             <div class="paris-search-bar">
                 <input type="text" name="search" />
@@ -14,7 +14,7 @@
             <div class="paris-categorie-liste"> 
                 <div class="paris-categorie-item-scroller"></div>
                 <div class="paris-categorie-item-container">
-                    <div class="paris-categorie-item active" >
+                    <div [ngClass]="{'paris-categorie-item' : true , 'active' : isactive === 'tous'}"   (click)="getMatchPaginer('')" >
                         <div class="paris-categorie-item-icons" >
                             <img src="assets/icons/tous.png" alt="tous"/>
                         </div>
@@ -22,7 +22,7 @@
                            Tous
                         </div>
                     </div>   
-                    <div class="paris-categorie-item" *ngFor="let categorie of categorieList">
+                    <div *ngFor="let categorie of categorieList" [ngClass]="{'paris-categorie-item' : true , 'active' : isactive === categorie.nom}"   (click)="getMatchPaginer(categorie.nom)">
                         <div class="paris-categorie-item-icons" >
                             <img src="assets/icons/{{categorie.image}}" alt="{{categorie.nom}}"/>
                         </div>
@@ -34,8 +34,98 @@
                 <div class="paris-categorie-item-scroller"></div>
             </div>
         </div>
-        <div class="paris-match-box">
-            <app-match-par-categorie *ngFor="let match of matchListPaginer" [match]="match"></app-match-par-categorie>
+        <div class="paris-match-box" *ngFor="let match of matchListPaginer">
+            <div class="match-categorie-container">
+                <div class="categorie-header-box">
+                    <div class="categorie-icons"></div>
+                    <div class="categorie-title-container">
+                        <a href="#" class="categorie-title">{{match._id}}</a>
+                        <span></span>
+                    </div>
+                    <div class="categorie-bet">
+                            <div class="categorie-bet-equipe">Cote Equipe 1</div>
+                            <div class="categorie-bet-equipe categorie-bet-equipe-null">-</div>
+                            <div class="categorie-bet-equipe">C. Match Null</div>
+                            <div class="categorie-bet-equipe categorie-bet-equipe-null">-</div>
+                            <div class="categorie-bet-equipe">Cote Equipe 2 </div>
+                    </div>
+                    <div class="categorie-bet">
+                        <div class="categorie-bet-equipe">Date et Heure</div>
+                    </div>
+                </div>
+                <div class="match-box" *ngFor="let matchcategorie of match.match">
+                    <div class="match-item">
+                        <div class="match-information">
+                            <div class="equipe-liste-score">
+                                <div class="pinned-icon">
+                                </div>
+                                <div class="equipe-title-container">
+                                    <div class="equipe-title">
+                                        <span>{{matchcategorie.idequipe1.nom}}</span>
+                                        <div class="equipe-score">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                    <div class="equipe-title">
+                                        <span>{{matchcategorie.idequipe2.nom}}</span>
+                                        <div class="equipe-score">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="match-information-details">
+                                <div class="pinned-icon">
+            
+                                </div>
+                                <div class="match-minute-live">
+            
+                                </div>
+                                <div class="match-state">
+            
+                                </div>
+                            </div>
+                        </div>
+                        <div class="match-bet">
+                            <div class="cote-equipe">
+                                <span class="cote-equipe-value">
+                                    {{matchcategorie.coteequipe1}}
+                                </span>
+                            </div>
+                            <div class="cote-equipe cote-nul">
+                                <span class="cote-equipe-value">
+                                    -
+                                </span>
+                            </div>
+                            <div class="cote-equipe">
+                                <span class="cote-equipe-value">
+                                    {{matchcategorie.coteMacthNull}}
+                                </span>
+                            </div>
+
+                            <div class="cote-equipe">
+                                <span class="cote-equipe-value">
+                                    {{matchcategorie.coteequipe2}}
+                                </span>
+                            </div>
+                        </div>
+                        <div class="match-bet">
+                            <div class="cote-equipe">
+                                <span class="cote-equipe-value">
+                                    {{matchcategorie.date | date}}
+                                </span>
+                            </div>
+                            <div class="cote-equipe">
+                                <span class="cote-equipe-value">
+                                    {{matchcategorie.heure}}
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            
         </div>
     </div>
 </div>

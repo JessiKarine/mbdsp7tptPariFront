@@ -61,13 +61,16 @@
     color : #e0e0e0 ; 
     text-transform: capitalize;
 }
-
+.paris-match-box:last-child {
+    padding-bottom: 10px;
+}
 .match-categorie-container { 
-    margin-bottom : 10px ;
+    margin-bottom : 1px ;
 }
 .categorie-header-box { 
     display: flex;
     background-color: #eef4f8;
+    padding: 7px 0;
 }
 .categorie-title-container { 
     display: flex;

@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Categorie } from 'src/app/models/categorie';
 import { Match } from 'src/app/models/match';
+import { MatchCategorie } from 'src/app/models/matchCategorie';
 import { MatchService } from 'src/app/service/match.service';
 
 @Component({
@@ -9,12 +10,15 @@ import { MatchService } from 'src/app/service/match.service';
   styleUrls: ['./paris-en-directe.component.css']
 })
 export class ParisEnDirecteComponent implements OnInit {
-  @Input() categorieList;
+  categorieList = null;
   matchListPaginer = null;
+  isactive = "tous";
   constructor(private matchService:MatchService) { }
 
   ngOnInit(): void {
-    this.getMatchPaginer();
+    this.getCategories();
+    this.getMatchPaginer('');
+    
   }
   getLiveIcons = () => { 
      let test = ' <svg id=Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.33 80.68">';
@@ -31,13 +35,28 @@ export class ParisEnDirecteComponent implements OnInit {
     return test ;     
   }
 
-  getMatchPaginer() {
-    this.matchService.getMatchPaginer()
+  getMatchPaginer= (idcategorie : string) => {
+    if(idcategorie ==='') { 
+      this.isactive = "tous";
+    }
+    else { 
+      this.isactive = idcategorie;
+    }
+    this.matchService.getMatchPaginer(idcategorie)
     .subscribe(data => {
       console.log("données reçues match paginer");
       console.log(data.docs);
-      this.matchListPaginer = data.docs as Match[];
+      this.matchListPaginer = data.docs as MatchCategorie[];
     });
     
+  }
+
+  getCategories() {
+    this.matchService.getCategorie()
+    .subscribe(data => {
+      console.log("données reçues categorie");
+      console.log(data);
+      this.categorieList = data as Categorie[];
+    });
   }
 }
