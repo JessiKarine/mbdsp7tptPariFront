@@ -31,6 +31,7 @@ import { CalendrierComponent } from './pages/calendrier/calendrier/calendrier.co
 import { AboutComponent } from './pages/about/about/about.component';
 import { ContactComponent } from './pages/contact/contact/contact.component';
 import { CalendrierFicheComponent } from './pages/calendrier/calendrier-fiche/calendrier-fiche.component';
+import { ResultatParCategorieComponent } from './widgets/resultat-par-categorie/resultat-par-categorie.component';
 
 const routes:Routes = [
   {
@@ -79,7 +80,8 @@ const routes:Routes = [
     CalendrierComponent,
     AboutComponent,
     ContactComponent,
-    CalendrierFicheComponent],
+    CalendrierFicheComponent,
+    ResultatParCategorieComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

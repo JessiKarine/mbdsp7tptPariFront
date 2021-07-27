@@ -1,0 +1,160 @@
+.paris-title-box { 
+    background-color: #4988b9;
+    display: flex;
+    justify-content: space-between;
+    padding : 10px ; 
+    margin-bottom : 1px ;
+    color : white ; 
+}
+.paris-title-box .paris-title {
+    font-weight: bold;
+    font-size : 16px ;
+}
+.paris-categorie-box { 
+    display: flex;
+}
+.paris-categorie-live { 
+    width: 40px;
+    background-color: #1b5785;
+    padding : 10px ; 
+}
+.paris-categorie-liste { 
+    background-color: #1b5785 ;
+    flex : 1 ;
+    margin-left: 1px;
+    display: flex;
+}
+.paris-categorie-liste  .paris-categorie-item-scroller { 
+    width : 50px ; 
+}
+
+.paris-categorie-liste  .paris-categorie-item-container { 
+    flex : 1 ;    
+    display: flex;
+}
+.paris-categorie-item-container .paris-categorie-item { 
+    display: flex ;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding : 0 5px ; 
+    margin-right: 5px;
+    cursor: pointer;
+}
+.paris-categorie-item-container .paris-categorie-item.active { 
+    box-shadow: inset 0 -2px #7ba837;
+    filter : brightness(1.5);
+    transition : all 0.3s ; 
+}
+.paris-categorie-item-container .paris-categorie-item:hover { 
+    filter : brightness(1.5);
+    transition : all 0.3s ; 
+}
+.paris-categorie-item-container .paris-categorie-item .paris-categorie-item-icons { 
+    width : 20px ; 
+    margin-right: 10px;
+}
+.paris-categorie-item-container .paris-categorie-item .paris-categorie-item-icons img { 
+    width : 100% ; 
+}
+.paris-categorie-item-container .paris-categorie-item  .paris-categorie-item-name { 
+    color : #e0e0e0 ; 
+    text-transform: capitalize;
+}
+
+.match-categorie-container { 
+    margin-bottom : 10px ;
+}
+.categorie-header-box { 
+    display: flex;
+    background-color: #eef4f8;
+}
+.categorie-title-container { 
+    display: flex;
+    width : 20%;
+    justify-content: space-between;
+    align-items: center;
+}
+.categorie-icons { 
+    display: inline-block;
+    width: 40px;
+    /*height: 21px; */
+    padding: 5px;
+    background: url(/assets/icons/flags-sprite.png) no-repeat 107.1446% 88.9362%;
+    background-size: 2438.1%;
+    flex-shrink: 0;
+}
+.categorie-icons:before { 
+    background-position: 19.1446% 42.56619%;
+}
+.categorie-bet { 
+    display: flex;
+    flex : 1 ;
+}
+.categorie-bet-equipe { 
+    flex : 1 ;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.match-box {}
+.match-item { 
+    display: flex;
+    background: white;
+    border-right : 1px solid #eef4f8; 
+    padding : 5px ; 
+}
+
+.match-item .match-information { 
+    /*flex : 1 ;*/
+    width: 23%;
+    padding-right : 5px ; 
+    border-right : 1px solid #eef4f8;
+}
+.match-item:hover .equipe-liste-score .equipe-title-container .equipe-title > span:first-child { 
+    font-weight: 600;
+    color : rgb(0, 94, 202);
+    transition: all 0.3s;
+}
+.match-item .match-information .equipe-liste-score { 
+    display: flex;
+}
+.match-item .match-information .pinned-icon { 
+    width: 40px;
+}
+.match-item .equipe-liste-score .equipe-title-container { 
+    flex: 1;
+}
+.match-item .equipe-liste-score .equipe-title-container .equipe-title{ 
+    display: flex;
+    justify-content: space-between;
+}
+.match-item .match-bet { 
+    flex : 1 ;
+    display: flex;
+    border-right : 1px solid #eef4f8;
+}
+.match-item .match-bet .cote-equipe {
+    flex : 1;
+    display : flex ; 
+    justify-content:  center;
+    align-items: center;
+}
+.match-item .match-bet .cote-equipe span { 
+    padding : 7px  10px; 
+    background-color: #eef4f8;
+    font-size : 12px ; 
+    border-radius: 5px;
+    font-weight: lighter;
+    min-width: 50px ; 
+    text-align: center;
+    cursor : pointer ; 
+}
+
+.match-item .match-bet .cote-equipe span:hover { 
+    background-color: #bce6fd;
+}
