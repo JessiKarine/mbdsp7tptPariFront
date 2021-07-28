@@ -3,6 +3,7 @@ import { DOCUMENT } from '@angular/common';
 import { Component, ElementRef, Inject, Input, OnInit, ViewChild } from '@angular/core';
 import { ResultatCategorie } from 'src/app/models/resultatCategorie';
 import { ResultatService } from 'src/app/service/resultat.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-resultat-par-categorie',
@@ -10,16 +11,28 @@ import { ResultatService } from 'src/app/service/resultat.service';
   styleUrls: ['./resultat-par-categorie.component.css']
 })
 export class ResultatParCategorieComponent implements OnInit {
-
+    pageOfItems: Array<any>;
     @Input() categorieList;
     resultatListPaginer : ResultatCategorie[] = null;
     isactive = "tous";
     table : any ="" ;
+    page: number=1;
+    limit: number=10;
+    totalDocs: number;
+    totalPages: number;
+    hasPrevPage: boolean;
+    prevPage: number;
+    hasNextPage: boolean;
+    nextPage: number;
 
-  constructor(@Inject(DOCUMENT) private document : Document , private resultatService:ResultatService) { }
+  constructor( private resultatService:ResultatService,private route:ActivatedRoute,private router:Router) { }
 
   ngOnInit(): void {
-    this.getResultatPaginer('');
+    this.route.queryParams.subscribe(queryParams => {
+      this.page = +queryParams.page || 1;
+      this.limit = +queryParams.limit || 10;
+      this.getResultatPaginer('');
+    });
   }
 
   getLiveIcons = () => { 
@@ -47,11 +60,57 @@ getResultatPaginer = (idcategorie : string) => {
   this.resultatService.getResultatPaginer(idcategorie)
   .subscribe(data => {
     console.log("données reçues resultat paginer");
-    console.log(data.docs);
+    console.log(data);
     this.resultatListPaginer = data.docs as ResultatCategorie[];
+    this.page = data.page;
+    this.limit = data.limit;
+    this.totalDocs = data.totalDocs;
+    this.totalPages = data.totalPages;
+    this.hasPrevPage = data.hasPrevPage;
+    this.prevPage = data.prevPage;
+    this.hasNextPage = data.hasNextPage;
+    this.nextPage = data.nextPage;
+  });
+}
+premierePage() {
+  this.router.navigate(['/home'], {
+    queryParams: {
+      page:1,
+      limit:this.limit,
+    }
   });
 }
 
+pageSuivante() {
+  /*
+  this.page = this.nextPage;
+  this.getAssignments();*/
+  this.router.navigate(['/home'], {
+    queryParams: {
+      page:this.nextPage,
+      limit:this.limit,
+    }
+  });
+}
+
+
+pagePrecedente() {
+  this.router.navigate(['/home'], {
+    queryParams: {
+      page:this.prevPage,
+      limit:this.limit,
+    }
+  });
+}
+
+dernierePage() {
+  this.router.navigate(['/home'], {
+    queryParams: {
+      page:this.totalPages,
+      limit:this.limit,
+    }
+  });
+}
 exportPDF = () => { 
   let divContents = '';
   divContents +="<h1>Resultats des matchs</h1>";
@@ -96,6 +155,13 @@ exportPDF = () => {
   printWindow.document.close();
   printWindow.print();
   printWindow.close();
+}
+
+onChangePage(pageOfItems: Array<any>) {
+  // update current page of items
+  console.log(pageOfItems);
+  this.pageOfItems = pageOfItems;
+
 }
  
 }
