@@ -30,7 +30,7 @@ export class MatchService {
 
   getMatchPaginer(idcategorie):Observable<any> {
   console.log("Dans le service tous les matchs avec pagination...")
-  return this.http.get<Match[]>(this.uri+'/getMatch?nomcategorie='+idcategorie);
+  return this.http.get<Match[]>(this.uri+'/getMatch?nomcategorie='+idcategorie+'&etat=A venir');
   }
 
 
