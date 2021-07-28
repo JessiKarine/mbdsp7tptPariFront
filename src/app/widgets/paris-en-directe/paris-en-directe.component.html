@@ -3,6 +3,9 @@
         <div class="paris-title-box">
             <div class="paris-title">
                 Liste des matchs à venir
+                <button id="btnPrint" (click)="exportPDF()">                       
+                    <img src="/assets/icons/file_pdf.png" alt="pdf-export">
+                </button>  
             </div>
             <div class="paris-search-bar">
                 <input type="text" name="search" />
@@ -131,5 +134,22 @@
             </div>
             
         </div>
+    </div>
+
+    <div class="card-footer pb-0 pt-3">
+        <nav class="pagination">
+            <button mat-raised-button color="accent" (click)="premierePage()">
+              Première
+            </button>
+            <button mat-raised-button color="accent" [disabled]="!hasPrevPage" (click)="pagePrecedente()">
+              Prev
+            </button>
+            <button mat-raised-button color="accent" [disabled]="!hasNextPage" (click)="pageSuivante()">
+              Suiv
+            </button>
+            <button mat-raised-button color="accent" (click)="dernierePage()">
+              Dernière
+            </button>
+          </nav>
     </div>
 </div>

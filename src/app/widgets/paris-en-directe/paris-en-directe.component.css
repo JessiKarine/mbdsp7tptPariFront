@@ -157,3 +157,11 @@
 .match-item .match-bet .cote-equipe span:hover { 
     background-color: #bce6fd;
 }
+#btnPrint {
+    width: 40px;
+    border : none;
+    background-color: transparent;
+}
+#btnPrint img { 
+    width: 100%;
+}

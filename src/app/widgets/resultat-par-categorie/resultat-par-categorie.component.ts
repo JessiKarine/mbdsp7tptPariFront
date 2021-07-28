@@ -11,7 +11,6 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./resultat-par-categorie.component.css']
 })
 export class ResultatParCategorieComponent implements OnInit {
-    pageOfItems: Array<any>;
     @Input() categorieList;
     resultatListPaginer : ResultatCategorie[] = null;
     isactive = "tous";
@@ -157,11 +156,6 @@ exportPDF = () => {
   printWindow.close();
 }
 
-onChangePage(pageOfItems: Array<any>) {
-  // update current page of items
-  console.log(pageOfItems);
-  this.pageOfItems = pageOfItems;
 
-}
  
 }
