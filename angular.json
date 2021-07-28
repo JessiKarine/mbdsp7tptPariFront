@@ -31,17 +31,7 @@
               
             ],
             "scripts": [
-              "src/assets/bootstrap/js/jquery.js",
-              "src/assets/bootstrap/js/jquery-ui.js",
-              "src/assets/bootstrap/js/bootstrap.min.js",
-              "src/assets/js/custom.js",
-              "src/assets/vendors/fullcalendar/fullcalendar.js",
-              "src/assets/vendors/fullcalendar/gcal.js",
-              "src/assets/js/calendar.js",
-              "src/assets/vendors/datatables/js/jquery.dataTables.min.js",
-              "src/assets/vendors/datatables/dataTables.bootstrap.js",
-              "src/assets/js/tables.js"
-
+              "./node_modules/jquery/dist/jquery.min.js"
             ]
           },
           "configurations": {
