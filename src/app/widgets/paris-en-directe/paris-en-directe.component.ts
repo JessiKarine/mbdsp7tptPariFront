@@ -19,9 +19,11 @@ export class ParisEnDirecteComponent implements OnInit {
   totalDocs: number;
   totalPages: number;
   hasPrevPage: boolean;
+  hasFiche:boolean;
   prevPage: number;
   hasNextPage: boolean;
   nextPage: number;
+  matchCategorie :Match;
   constructor(private matchService:MatchService,private route:ActivatedRoute,private router:Router) { }
 
   ngOnInit(): void {
@@ -120,6 +122,11 @@ export class ParisEnDirecteComponent implements OnInit {
       console.log(data);
       this.categorieList = data as Categorie[];
     });
+  }
+
+  voirfiche(matchcategorie : Match){
+    this.matchCategorie = matchcategorie;
+    this.hasFiche=true;
   }
 
   exportPDF = () => { 
