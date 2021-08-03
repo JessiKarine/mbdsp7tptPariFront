@@ -81,9 +81,6 @@ premierePage() {
 }
 
 pageSuivante() {
-  /*
-  this.page = this.nextPage;
-  this.getAssignments();*/
   this.router.navigate(['/home'], {
     queryParams: {
       page:this.nextPage,
