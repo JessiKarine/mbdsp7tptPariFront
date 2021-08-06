@@ -118,6 +118,7 @@
     font-weight: 600;
     color : rgb(0, 94, 202);
     transition: all 0.3s;
+    cursor: pointer;
 }
 .match-item .match-information .equipe-liste-score { 
     display: flex;

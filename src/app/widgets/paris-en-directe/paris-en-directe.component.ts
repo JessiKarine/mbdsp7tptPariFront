@@ -1,3 +1,4 @@
+import { DatePipe } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Categorie } from 'src/app/models/categorie';
@@ -140,20 +141,20 @@ export class ParisEnDirecteComponent implements OnInit {
       divContents +="<tr class='subheader' style='background-color: #f7f7f7'>";
         divContents+=`<td>equipe 1</td>`;
         divContents+=`<td>equipe 2</td>`;
-        divContents+=`<td>Score equipe 1</td>`;
-        divContents+=`<td>Score equipe 2</td>`;
         divContents+=`<td>Cote equipe 1</td>`;
         divContents+=`<td>Cote equipe 2</td>`;
+        divContents+=`<td>Date</td>`;
+        divContents+=`<td>Heure</td>`;
       divContents +="</tr>";
         for(let j=0;j<this.matchListPaginer[i].match.length ; j++) { 
             
           divContents+="<tr>";
             divContents+=`<td>${this.matchListPaginer[i].match[j].idequipe1.nom}</td>`;
             divContents+=`<td>${this.matchListPaginer[i].match[j].idequipe2.nom}</td>`;
-            divContents+=`<td>${this.matchListPaginer[i].match[j].pointequipe1}</td>`;
-            divContents+=`<td>${this.matchListPaginer[i].match[j].pointequipe2}</td>`;
             divContents+=`<td>${this.matchListPaginer[i].match[j].coteequipe1}</td>`;
             divContents+=`<td>${this.matchListPaginer[i].match[j].coteequipe2}</td>`;
+            divContents+=`<td>${ this.getFormatedDate(new Date(this.matchListPaginer[i].match[j].date),'dd/MM/yyyy') }</td>`;
+            divContents+=`<td>${this.matchListPaginer[i].match[j].heure }</td>`;
             
           divContents+="</tr>";
         }
@@ -174,4 +175,8 @@ export class ParisEnDirecteComponent implements OnInit {
     printWindow.print();
     printWindow.close();
   }
+  getFormatedDate(date: Date, format: string) {
+    const datePipe = new DatePipe('en-US');
+    return datePipe.transform(date, format);
+}
 }
