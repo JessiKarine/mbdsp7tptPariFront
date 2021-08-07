@@ -1,6 +1,7 @@
 import { Equipe } from "./equipe";
 import { Categorie } from "./categorie";
 export class Match {
+    _id : String;
     idcategorie : Categorie ; 
     idequipe1 : Equipe ; 
     idequipe2 : Equipe ;

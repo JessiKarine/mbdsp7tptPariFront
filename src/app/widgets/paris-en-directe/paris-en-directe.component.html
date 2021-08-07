@@ -6,7 +6,7 @@
                 <div class="paris-container">
                     <div class="paris-title-box">
                         <div class="paris-title">
-                            Liste des matchs à venir
+                            Liste des matchs à venir.
                             <button id="btnPrint" (click)="exportPDF()">                       
                                 <img src="/assets/icons/file_pdf.png" alt="pdf-export">
                             </button>  
@@ -177,9 +177,9 @@
                         </div>
                         <div class="qrcode">
                             <img id='barcode' 
-                                src="https://api.qrserver.com/v1/create-qr-code/?data={{matchCategorie?.idequipe1?.nom}}&amp;size=100x100" 
+                                src="https://api.qrserver.com/v1/create-qr-code/?data={{matchCategorie?._id}}&amp;size=100x100"
                                 alt="" 
-                                title="HELLO"
+                                title="Scanner QrCode"
                             />
                         </div>
                     </div>
