@@ -67,6 +67,14 @@
     flex : 1 ; 
     margin-right: 15px;
 }
+.pari-content-details-item:last-child { 
+    display: none ;
+}
+@media (min-width : 992px) { 
+    .pari-content-details-item:last-child { 
+        display: block ;
+    }
+}
 .pari-content-match { 
     min-width: 300px;
 }

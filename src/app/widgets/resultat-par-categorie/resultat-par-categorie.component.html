@@ -38,100 +38,104 @@
                 <div class="paris-categorie-item-scroller"></div>
             </div>
         </div>
-        <div class="paris-match-box" *ngFor="let resultat of resultatListPaginer">
-            <div class="match-categorie-container">
-                <div class="categorie-header-box">
-                    <div class="categorie-icons"></div>
-                    <div class="categorie-title-container">
-                        <a href="#" class="categorie-title">{{resultat._id}}</a>
-                        <span></span>
-                    </div>
-                    <div class="categorie-bet">
-                            <div class="categorie-bet-equipe">Score Equipe 1</div>
-                            <div class="categorie-bet-equipe categorie-bet-equipe-null"></div>
-                            <div class="categorie-bet-equipe">Score Equipe 2</div>
-                    </div>
-                    <div class="categorie-bet">
-                        <div class="categorie-bet-equipe">Cote Equipe 1</div>
-                        <div class="categorie-bet-equipe categorie-bet-equipe-null"></div>
-                        <div class="categorie-bet-equipe">Cote Equipe 2</div>
-                    </div>
-                    <div class="categorie-bet">
-                        <div class="categorie-bet-equipe">Date et Heure</div>
-                    </div>
-                </div>
-                <div class="match-box" *ngFor="let resultatcategorie of resultat.resultats">
-                    <div class="match-item">
-                        <div class="match-information">
-                            <div class="equipe-liste-score">
-                                <div class="pinned-icon">
-                                    
-                                </div>
-                                <div class="equipe-title-container">
-                                    <div class="equipe-title">
-                                        <span>{{resultatcategorie.idequipe1.nom}}</span>
-                                        <div class="equipe-score">
-                                            <span></span>
+        <div class="paris-match-box-scrollable">
+            <div class="paris-match-box-container">
+                <div class="paris-match-box" *ngFor="let resultat of resultatListPaginer">
+                    <div class="match-categorie-container">
+                        <div class="categorie-header-box">
+                            <div class="categorie-icons"></div>
+                            <div class="categorie-title-container">
+                                <a href="#" class="categorie-title">{{resultat._id}}</a>
+                                <span></span>
+                            </div>
+                            <div class="categorie-bet">
+                                    <div class="categorie-bet-equipe">Score Equipe 1</div>
+                                    <div class="categorie-bet-equipe categorie-bet-equipe-null"></div>
+                                    <div class="categorie-bet-equipe">Score Equipe 2</div>
+                            </div>
+                            <div class="categorie-bet">
+                                <div class="categorie-bet-equipe">Cote Equipe 1</div>
+                                <div class="categorie-bet-equipe categorie-bet-equipe-null"></div>
+                                <div class="categorie-bet-equipe">Cote Equipe 2</div>
+                            </div>
+                            <div class="categorie-bet">
+                                <div class="categorie-bet-equipe">Date et Heure</div>
+                            </div>
+                        </div>
+                        <div class="match-box" *ngFor="let resultatcategorie of resultat.resultats">
+                            <div class="match-item">
+                                <div class="match-information">
+                                    <div class="equipe-liste-score">
+                                        <div class="pinned-icon">
+                                            
+                                        </div>
+                                        <div class="equipe-title-container">
+                                            <div class="equipe-title">
+                                                <span>{{resultatcategorie.idequipe1.nom}}</span>
+                                                <div class="equipe-score">
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="equipe-title">
+                                                <span>{{resultatcategorie.idequipe2.nom}}</span>
+                                                <div class="equipe-score">
+                                                    <span></span>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="equipe-title">
-                                        <span>{{resultatcategorie.idequipe2.nom}}</span>
-                                        <div class="equipe-score">
-                                            <span></span>
+                                    <div class="match-information-details">
+                                        <div class="pinned-icon">
+                                        </div>
+                                        <div class="match-minute-live">
+                                        </div>
+                                        <div class="match-state">
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="match-information-details">
-                                <div class="pinned-icon">
+                                <div class="match-bet">
+                                    <div class="cote-equipe">
+                                        <span class="cote-equipe-value">
+                                            {{resultatcategorie.pointequipe1}}
+                                        </span>
+                                    </div>
+                                    <div class="cote-equipe cote-nul">
+                                        -
+                                    </div>
+                                    <div class="cote-equipe">
+                                        <span class="cote-equipe-value">
+                                            {{resultatcategorie.pointequipe2}}
+                                        </span>
+                                    </div>
+                                
                                 </div>
-                                <div class="match-minute-live">
+                                <div class="match-bet">
+                                    <div class="cote-equipe">
+                                        <span class="cote-equipe-value">
+                                            {{resultatcategorie.coteequipe1}}
+                                        </span>
+                                    </div>
+                                    <div class="cote-equipe cote-nul">
+                                        -
+                                    </div>
+                                    <div class="cote-equipe">
+                                        <span class="cote-equipe-value">
+                                            {{resultatcategorie.coteequipe2}}
+                                        </span>
+                                    </div>
                                 </div>
-                                <div class="match-state">
+                                <div class="match-bet">
+                                    <div class="cote-equipe">
+                                        <span class="cote-equipe-value">
+                                            {{resultatcategorie.date | date}}
+                                        </span>
+                                    </div>
+                                    <div class="cote-equipe">
+                                        <span class="cote-equipe-value">
+                                            {{resultatcategorie.heure}}
+                                        </span>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="match-bet">
-                            <div class="cote-equipe">
-                                <span class="cote-equipe-value">
-                                    {{resultatcategorie.pointequipe1}}
-                                </span>
-                            </div>
-                            <div class="cote-equipe cote-nul">
-                                -
-                            </div>
-                            <div class="cote-equipe">
-                                <span class="cote-equipe-value">
-                                    {{resultatcategorie.pointequipe2}}
-                                </span>
-                            </div>
-                           
-                        </div>
-                        <div class="match-bet">
-                            <div class="cote-equipe">
-                                <span class="cote-equipe-value">
-                                    {{resultatcategorie.coteequipe1}}
-                                </span>
-                            </div>
-                            <div class="cote-equipe cote-nul">
-                                -
-                            </div>
-                            <div class="cote-equipe">
-                                <span class="cote-equipe-value">
-                                    {{resultatcategorie.coteequipe2}}
-                                </span>
-                            </div>
-                        </div>
-                        <div class="match-bet">
-                            <div class="cote-equipe">
-                                <span class="cote-equipe-value">
-                                    {{resultatcategorie.date | date}}
-                                </span>
-                            </div>
-                            <div class="cote-equipe">
-                                <span class="cote-equipe-value">
-                                    {{resultatcategorie.heure}}
-                                </span>
                             </div>
                         </div>
                     </div>

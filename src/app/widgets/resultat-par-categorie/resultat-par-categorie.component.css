@@ -61,6 +61,17 @@
     color : #e0e0e0 ; 
     text-transform: capitalize;
 }
+.paris-match-box-scrollable { 
+    overflow-x: auto;
+}
+.paris-match-box-container { 
+    width: 200vw;
+}
+@media (min-width : 992px) { 
+    .paris-match-box-container { 
+        width: auto;
+    }
+}
 .paris-match-box:last-child {
     padding-bottom: 10px;
 }
