@@ -149,7 +149,7 @@
     position: relative;
 }
 .qrcode { 
-    width: 120px;
+    width: 100px;
     border : 3px solid rgb(28, 102, 151) ;  
     border-radius: 100px ;
     overflow: hidden;
@@ -158,13 +158,20 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    left : 39% ;
+    left : 32% ;
     top : -12px ; 
     background-color: white; 
 
 }
 .qrcode  img { 
     width: 100%;
+}
+@media (min-width : 992px) { 
+    .qrcode { 
+        width: 120px;
+        left : 39% ;
+        top : -12px ; 
+    }
 }
 .cote-container { 
     display: flex;

@@ -80,3 +80,17 @@
 .pari-content-match { 
     min-width: 300px;
 }
+
+.modal .pariez-step { 
+
+}
+.modal .content-box-header { 
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    background-color: #4988b9;
+    color : white ;
+}
+.modal .pariez-step .pariez-step-item span { 
+    font-weight: bold;
+}
