@@ -1,8 +1,8 @@
-<div class="col-md-12">
+
     <div class="content-box-header">
         <div class="panel-title">{{match.idcategorie.nom}}</div>
     </div>
-    <div class="content-box-large box-with-header">
+    <div class="content-box-large box-with-header match-tem">
       <div class="match-container">
           <div class="match-equipe">
               <div class="match-equipe-logo">
@@ -13,8 +13,10 @@
           </div>
           <div class="match-time-container">
               <div class="match-time">
-                  <span>{{match.date | date }}</span>
-                  <span>{{match.heure}}</span>
+                  <div class="match-time-ilaina">
+                    <span>{{match.date | date }}</span>
+                    <span>{{match.heure}}</span>
+                </div>
               </div>
           </div>
           <div class="match-equipe">
@@ -37,4 +39,3 @@
           
       </div>
   </div>
-</div>

@@ -1,0 +1,87 @@
+
+.inscription-container { 
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.inscription-container app-button.button-entete::ng-deep .custom-button button{ 
+   width: 100%;
+}
+.inscription-container app-button.button-valider::ng-deep .custom-button button{ 
+    height: 40px;
+ }
+.inscription-module { 
+    padding : 10px 10px ;
+    overflow-y: auto;
+}
+
+@media (min-width : 992px) { 
+    .inscription-module { 
+        max-height: 360px;
+    }
+}
+.inscription-module::-webkit-scrollbar {
+    cursor: pointer !important;
+    width: 6px;
+}
+.inscription-module::-webkit-scrollbar-track {
+    border-radius: 2px;
+    width: 6px;
+    cursor: pointer;
+  }
+
+.inscription-module::-webkit-scrollbar-thumb {
+    background: rgb(141, 141, 141); 
+    border-radius: 10px;
+    height: 6px;
+    transition: .5s ease-in-out;
+  }
+.inscription-module::-webkit-scrollbar-thumb:hover {
+    background: #59c0e9;
+    transition: .3s ease-in-out;
+}
+
+.inscription-module h3 { 
+    text-transform: capitalize;
+    text-align: center;
+}
+.inscription-module .inscription-form  { 
+    margin-bottom: 10px;
+}
+.inscription-module .inscription-form .form-group { 
+    display: flex;
+    flex-direction: column;
+    max-height: 60px;
+}
+.form-combinaison {
+    flex: 1; 
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+@media (min-width : 992px) {
+    .form-combinaison { 
+        flex-direction: row;
+    }
+}
+
+.inscription-form .form-group .put-group { 
+    flex : 1 ; 
+    display: flex;
+}
+.inscription-form .form-group .put-group .input-icons { 
+    padding : 10px;
+    background-color: #4988b9;
+    color : white ; 
+ 
+}
+.inscription-form .form-group .put-group input {
+    flex: 1;
+    border: none ;
+    outline: none ;
+    padding-left: 10px;
+    border : 1px solid rgb(189, 189, 189);
+    border-left: none;
+}

@@ -32,6 +32,10 @@ import { AboutComponent } from './pages/about/about/about.component';
 import { ContactComponent } from './pages/contact/contact/contact.component';
 import { CalendrierFicheComponent } from './pages/calendrier/calendrier-fiche/calendrier-fiche.component';
 import { ResultatParCategorieComponent } from './widgets/resultat-par-categorie/resultat-par-categorie.component';
+import { PubBannerComponent } from './widgets/banner/pub-banner/pub-banner.component';
+import { CarouselBannerComponent } from './widgets/banner/carousel-banner/carousel-banner.component';
+import { InscriptionComponent } from './widgets/inscription/inscription.component';
+import { ButtonComponent } from './widgets/ui/button/button.component';
 
 const routes:Routes = [
   {
@@ -81,7 +85,11 @@ const routes:Routes = [
     AboutComponent,
     ContactComponent,
     CalendrierFicheComponent,
-    ResultatParCategorieComponent],
+    ResultatParCategorieComponent,
+    PubBannerComponent,
+    CarouselBannerComponent,
+    InscriptionComponent,
+    ButtonComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Categorie } from 'src/app/models/categorie';
+import { PubBanner } from 'src/app/models/pub-banner';
 import { Sponsors } from 'src/app/models/sponsor';
 import { MatchService } from 'src/app/service/match.service';
 import { Match } from '../../models/match';
@@ -14,6 +15,29 @@ export class PariComponent implements OnInit {
    matchList = null;
    sponsorsList = null;
    categorieList = null;
+   pubBannerList : PubBanner[] = [
+     {
+       title : "test",
+       value : 15000 , 
+       firstElement : "plus de",
+       secondElement : "jeux",
+       thirdElement : { 
+         url : "",
+         name : "Pariez"
+       },
+       imageBackground : ""
+     },{
+      title : "test",
+      value : 15000 , 
+      firstElement : "plus de",
+      secondElement : "jeux",
+      thirdElement : { 
+        url : "",
+        name : "Pariez"
+      },
+      imageBackground : ""
+    }
+   ];
   constructor(private matchService:MatchService) { }
 
   ngOnInit(): void {
