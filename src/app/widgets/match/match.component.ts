@@ -9,9 +9,14 @@ import { Match } from 'src/app/models/match';
 export class MatchComponent implements OnInit {
 
   @Input() match : Match;
+  @Input() callBack : Function;
+  @Input() isQrCodeMode : boolean = false ; 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  pariHandler(): void {
+
+  }
 }

@@ -4,6 +4,7 @@ import { PubBanner } from 'src/app/models/pub-banner';
 import { Sponsors } from 'src/app/models/sponsor';
 import { MatchService } from 'src/app/service/match.service';
 import { Match } from '../../models/match';
+declare var $ :  any ; 
 @Component({
   selector: 'app-pari',
   templateUrl: './pari.component.html',
@@ -38,9 +39,12 @@ export class PariComponent implements OnInit {
       imageBackground : ""
     }
    ];
+   public theBoundCallback: Function;
+   matchSelected : Match ; 
   constructor(private matchService:MatchService) { }
 
   ngOnInit(): void {
+    this.theBoundCallback = this.getModalMatch.bind(this);
     this.getDerniersMatchs();
     this.getSponsors();
     this.getCategories();
@@ -72,6 +76,10 @@ export class PariComponent implements OnInit {
       this.categorieList = data as Categorie[];
     });
   }
-  
+
+  getModalMatch(match : Match) {  
+      this.matchSelected = match ; 
+      $('#modalMatch').modal('show');
+  }
 
 }

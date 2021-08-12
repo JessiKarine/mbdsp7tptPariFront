@@ -29,7 +29,7 @@
     content : ' ';
     background-image: url(/assets/images/line.png);
     align-self: center;
-    width: 79px;
+    width: 55px;
     height: 16px;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -39,11 +39,23 @@
     content: "  ";
     align-self: center;
     background-image: url(/assets/images/line-reverse.png);
-    width: 79px;
+    width: 55px;
     height: 16px;
     background-size: 100%;
     background-repeat: no-repeat;
     background-position-y: -10px;
+}
+@media (min-width : 500px) { 
+    .match-time-container::before ,  .match-time-container::after { 
+        width: 114px;
+        background-position-y:-19px;
+    }
+}
+@media (min-width : 992px) { 
+    .match-time-container::before ,  .match-time-container::after { 
+        width: 79px;
+        background-position-y:-10px;
+    }
 }
 .match-time {
     background-image: url('/assets/images/ballon-transparent-test2.png');
@@ -131,4 +143,48 @@
     color:white;
     border: none;
     margin-bottom: 1px;
+}
+
+.cote-qr-code { 
+    position: relative;
+}
+.qrcode { 
+    width: 120px;
+    border : 3px solid rgb(28, 102, 151) ;  
+    border-radius: 100px ;
+    overflow: hidden;
+    padding: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left : 39% ;
+    top : -12px ; 
+    background-color: white; 
+
+}
+.qrcode  img { 
+    width: 100%;
+}
+.cote-container { 
+    display: flex;
+    justify-content: space-between;
+    padding : 10px ; 
+    background-color: rgb(28, 102, 151);
+}
+.cote-container .cote { 
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color : white ; 
+}
+.cote-container .cote:last-child { 
+    align-items: flex-end;
+}
+.cote-container .cote span { 
+    padding : 7px 15px ;
+    border-radius: 5px ;
+    background-color: rgb(21, 73, 107) ;
+    cursor: pointer;
 }
