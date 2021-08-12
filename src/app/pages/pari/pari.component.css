@@ -64,13 +64,15 @@
     }
 }
 .pari-content-details { 
-    flex : 1 ; 
-    margin-right: 15px;
+    flex : 1 ;
 }
 .pari-content-details-item:last-child { 
     display: none ;
 }
 @media (min-width : 992px) { 
+    .pari-content-details { 
+        margin-right: 15px;
+    }
     .pari-content-details-item:last-child { 
         display: block ;
     }

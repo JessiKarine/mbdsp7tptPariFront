@@ -26,12 +26,24 @@
     display: flex;
 }
 .match-time-container::before { 
-    content: "-----------";
+    content : ' ';
+    background-image: url(/assets/images/line.png);
     align-self: center;
+    width: 79px;
+    height: 16px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-y: -10px;
 }
 .match-time-container::after { 
-    content: "-----------";
+    content: "  ";
     align-self: center;
+    background-image: url(/assets/images/line-reverse.png);
+    width: 79px;
+    height: 16px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-y: -10px;
 }
 .match-time {
     background-image: url('/assets/images/ballon-transparent-test2.png');
