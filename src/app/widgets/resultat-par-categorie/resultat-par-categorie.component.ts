@@ -23,6 +23,7 @@ export class ResultatParCategorieComponent implements OnInit {
     prevPage: number;
     hasNextPage: boolean;
     nextPage: number;
+    searchedTerm : string ; 
 
   constructor( private resultatService:ResultatService,private route:ActivatedRoute,private router:Router) { }
 

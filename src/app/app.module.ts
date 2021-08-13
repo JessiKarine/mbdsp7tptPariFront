@@ -36,6 +36,7 @@ import { PubBannerComponent } from './widgets/banner/pub-banner/pub-banner.compo
 import { CarouselBannerComponent } from './widgets/banner/carousel-banner/carousel-banner.component';
 import { InscriptionComponent } from './widgets/inscription/inscription.component';
 import { ButtonComponent } from './widgets/ui/button/button.component';
+import { FilterTabPipe } from './pipe/filter-tab.pipe';
 
 const routes:Routes = [
   {
@@ -89,7 +90,8 @@ const routes:Routes = [
     PubBannerComponent,
     CarouselBannerComponent,
     InscriptionComponent,
-    ButtonComponent],
+    ButtonComponent,
+    FilterTabPipe],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

@@ -9,7 +9,7 @@
             </div>
            
             <div class="paris-search-bar">
-                <input type="text" name="search" />
+                <input type="text" name="search" [(ngModel)]="searchedTerm" />
             </div>
         </div>
         <div class="paris-categorie-box">
@@ -40,7 +40,7 @@
         </div>
         <div class="paris-match-box-scrollable">
             <div class="paris-match-box-container">
-                <div class="paris-match-box" *ngFor="let resultat of resultatListPaginer">
+                <div class="paris-match-box" *ngFor="let resultat of resultatListPaginer |filterTab:searchedTerm">
                     <div class="match-categorie-container">
                         <div class="categorie-header-box">
                             <div class="categorie-icons"></div>

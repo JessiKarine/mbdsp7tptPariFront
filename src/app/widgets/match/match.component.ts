@@ -11,6 +11,7 @@ export class MatchComponent implements OnInit {
   @Input() match : Match;
   @Input() callBack : Function;
   @Input() isQrCodeMode : boolean = false ; 
+  isQrCodeOnLoad : boolean = true ; 
   constructor() { }
 
   ngOnInit(): void {
@@ -18,5 +19,8 @@ export class MatchComponent implements OnInit {
 
   pariHandler(): void {
 
+  }
+  onLoadQrCode() :void {
+    this.isQrCodeOnLoad = false ; 
   }
 }
