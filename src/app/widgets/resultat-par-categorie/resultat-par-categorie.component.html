@@ -40,7 +40,7 @@
         </div>
         <div class="paris-match-box-scrollable">
             <div class="paris-match-box-container">
-                <div class="paris-match-box" *ngFor="let resultat of resultatListPaginer |filterTab:searchedTerm">
+                <div class="paris-match-box" *ngFor="let resultat of resultatListPaginer ">
                     <div class="match-categorie-container">
                         <div class="categorie-header-box">
                             <div class="categorie-icons"></div>
@@ -62,7 +62,7 @@
                                 <div class="categorie-bet-equipe">Date et Heure</div>
                             </div>
                         </div>
-                        <div class="match-box" *ngFor="let resultatcategorie of resultat.resultats">
+                        <div class="match-box" *ngFor="let resultatcategorie of resultat.resultats |filterTab:searchedTerm">
                             <div class="match-item">
                                 <div class="match-information">
                                     <div class="equipe-liste-score">

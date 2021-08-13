@@ -19,22 +19,24 @@ export class InscriptionComponent implements OnInit {
   enteteButton : Button =  {
   value : "Inscription" 
   }
-  constructor(private utilisateurService : UtilisateurService) { 
-  }
   validerButton : Button =  {
     value : "Valider" , 
-    callBack : function() {
-        const idRole = new Role(2,"joueur","2");
-        this.utilisateur = new Utilisateur(this.login,this.password,this.nom,this.prenom,"",this.email,this.numeroTelephone,idRole);
-        this.utilisateur.etat = "active";
-        this.utilisateurService.inscription(this.utilisateur)
-         .subscribe(() => {
-          console.log("inscription ao");
-      })
-    }
+    callBack : Function 
   }
+  constructor(private utilisateurService : UtilisateurService) { 
+    this.validerButton.callBack = this.inscription.bind(this);
+  }
+  
   ngOnInit(): void {
     
   }
-
+  inscription() { 
+    const idRole = new Role(2,"joueur","2");
+    this.utilisateur = new Utilisateur(this.login,this.password,this.nom,this.prenom,"",this.email,this.numeroTelephone,idRole);
+    this.utilisateur.etat = "active";
+    this.utilisateurService.inscription(this.utilisateur)
+     .subscribe(() => {
+      console.log("inscription ao");
+    })
+  }
 }
