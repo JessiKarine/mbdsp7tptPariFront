@@ -1,5 +1,11 @@
 <div class="custom-button">
     <button  style="{{button?.style}}" (click)="button.callBack()">
-        {{button.value}}
+        <img 
+            *ngIf="button?.isOnLoad ;else notOnLoad  "
+            src="assets/images/loading-buffering.gif"
+        />
+        <ng-template #notOnLoad>
+            <span>{{button.value}}</span> 
+        </ng-template>
     </button>
 </div>
