@@ -9,7 +9,7 @@
                         <div class="input-icons">
                             <span class=" glyphicon glyphicon-chevron-left"></span>
                         </div>
-                        <input type="text" classs="form-control" placeholder="nom" name="nom"/>
+                        <input type="text" classs="form-control" placeholder="nom" name="nom" required [(ngModel)]="nom"/>
                     </div>
                 </div>
                 <div class="form-group">
@@ -18,7 +18,7 @@
                         <div class="input-icons">
                             <span class=" glyphicon glyphicon-chevron-left"></span>
                         </div>
-                        <input type="text" classs="form-control" placeholder="Prenom" name="Prenom"/>
+                        <input type="text" classs="form-control" placeholder="Prenom" name="Prenom" required [(ngModel)]="prenom"/>
                     </div>
                 </div>
             </div>
@@ -29,7 +29,7 @@
                         <div class="input-icons">
                             <span class=" glyphicon glyphicon-chevron-left"></span>
                         </div>
-                        <input type="text" classs="form-control" placeholder="Numero" name="Numero"/>
+                        <input type="text" classs="form-control" placeholder="Numero" name="Numero" [(ngModel)]="numeroTelephone"/>
                     </div>
                 </div>
                 <div class="form-group">
@@ -38,7 +38,7 @@
                         <div class="input-icons">
                             <span class=" glyphicon glyphicon-chevron-left"></span>
                         </div>
-                        <input type="text" classs="form-control" placeholder="Email" name="Email"/>
+                        <input type="text" classs="form-control" placeholder="Email" name="Email" required [(ngModel)]="email"/>
                     </div>
                 </div>
             </div>
@@ -49,16 +49,16 @@
                     <div class="input-icons">
                         <span class=" glyphicon glyphicon-chevron-left"></span>
                     </div>
-                    <input type="text" classs="form-control" placeholder="Nom d'utilisateur" name="login"/>
+                    <input type="text" classs="form-control" placeholder="Nom d'utilisateur" name="login" required [(ngModel)]="login"/>
                 </div>
             </div>
             <div class="form-group">
-                <label for="Password">Password</label>
+                <label for="Password">Mot de passe</label>
                 <div class="put-group">
                     <div class="input-icons">
                         <span class=" glyphicon glyphicon-chevron-left"></span>
                     </div>
-                    <input type="Password" classs="form-control" placeholder="Password" name="Password"/>
+                    <input type="Password" classs="form-control" placeholder="Mot de passe" name="Password" required [(ngModel)]="password"/>
                 </div>
             </div>
             
