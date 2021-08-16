@@ -16,6 +16,7 @@ export class InscriptionComponent implements OnInit {
   prenom : String;
   email : String;
   numeroTelephone : String;
+  error : String;
   enteteButton : Button =  {
   value : "Inscription" 
   }
@@ -29,9 +30,10 @@ export class InscriptionComponent implements OnInit {
   }
   
   ngOnInit(): void {
-    
+    this.error ="";
   }
   inscription() { 
+    
     const idRole = new Role(2,"joueur","2");
     this.utilisateur = new Utilisateur(this.login,this.password,this.nom,this.prenom,"",this.email,this.numeroTelephone,idRole);
     this.utilisateur.etat = "active";
@@ -40,6 +42,7 @@ export class InscriptionComponent implements OnInit {
      .subscribe(() => {
       console.log("inscription ao");
       this.validerButton.isOnLoad = false ; 
+      this.error = "votre inscription est reussi";
     })
   }
 }

@@ -65,5 +65,9 @@
             
         </div>
         <app-button class="button-valider" [button]="validerButton"></app-button>
+
+        <div class="col-md-12" [ngClass]="{ 'active' : error , 'err-container' : true }">
+            <div class="msg-err">{{error}}</div>       
+        </div> 
     </div>
 </div>
