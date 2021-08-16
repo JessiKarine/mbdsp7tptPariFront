@@ -25,8 +25,8 @@ export class ParisEnDirecteComponent implements OnInit {
   hasNextPage: boolean;
   nextPage: number;
   matchCategorie :Match;
+  searchedTerm : string;
   constructor(private matchService:MatchService,private route:ActivatedRoute,private router:Router) { }
-
   ngOnInit(): void {
     this.route.queryParams.subscribe(queryParams => {
       this.page = +queryParams.page || 1;

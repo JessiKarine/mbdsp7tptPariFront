@@ -248,3 +248,14 @@
     background-color: rgb(21, 73, 107) ;
     cursor: pointer;
 }
+.paris-match-box-scrollable { 
+    overflow-x: auto;
+}
+.paris-match-box-container { 
+    width: 200vw;
+}
+@media (min-width : 992px) { 
+    .paris-match-box-container { 
+        width: auto;
+    }
+}

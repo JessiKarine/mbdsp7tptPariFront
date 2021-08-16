@@ -12,34 +12,35 @@
                 <input type="text" name="search" [(ngModel)]="searchedTerm" />
             </div>
         </div>
-        <div class="paris-categorie-box">
-            <div class="paris-categorie-live" [innerHTML] = "getLiveIcons() | htmlrender">
-            </div>
-            <div class="paris-categorie-liste"> 
-                <div class="paris-categorie-item-scroller"></div>
-                <div class="paris-categorie-item-container">
-                    <div  [ngClass]="{'paris-categorie-item' : true, 'active' : isactive === 'tous'}"  (click)="getResultatPaginer('')"  >
-                        <div class="paris-categorie-item-icons"  >
-                            <img src="assets/icons/tous.png" alt="tous"/>
-                        </div>
-                        <div class="paris-categorie-item-name">
-                           Tous
-                        </div>
-                    </div>   
-                    <div *ngFor="let categorie of categorieList" [ngClass]="{'paris-categorie-item' : true , 'active' : isactive === categorie.nom}"   (click)="getResultatPaginer(categorie.nom)">
-                        <div class="paris-categorie-item-icons" >
-                            <img src="assets/icons/{{categorie.image}}" alt="{{categorie.nom}}"/>
-                        </div>
-                        <div class="paris-categorie-item-name">
-                            {{categorie.nom}}
-                        </div>
-                    </div>
-                </div> 
-                <div class="paris-categorie-item-scroller"></div>
-            </div>
-        </div>
+       
         <div class="paris-match-box-scrollable">
             <div class="paris-match-box-container">
+                <div class="paris-categorie-box">
+                    <div class="paris-categorie-live" [innerHTML] = "getLiveIcons() | htmlrender">
+                    </div>
+                    <div class="paris-categorie-liste"> 
+                        <div class="paris-categorie-item-scroller"></div>
+                        <div class="paris-categorie-item-container">
+                            <div  [ngClass]="{'paris-categorie-item' : true, 'active' : isactive === 'tous'}"  (click)="getResultatPaginer('')"  >
+                                <div class="paris-categorie-item-icons"  >
+                                    <img src="assets/icons/tous.png" alt="tous"/>
+                                </div>
+                                <div class="paris-categorie-item-name">
+                                   Tous
+                                </div>
+                            </div>   
+                            <div *ngFor="let categorie of categorieList" [ngClass]="{'paris-categorie-item' : true , 'active' : isactive === categorie.nom}"   (click)="getResultatPaginer(categorie.nom)">
+                                <div class="paris-categorie-item-icons" >
+                                    <img src="assets/icons/{{categorie.image}}" alt="{{categorie.nom}}"/>
+                                </div>
+                                <div class="paris-categorie-item-name">
+                                    {{categorie.nom}}
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="paris-categorie-item-scroller"></div>
+                    </div>
+                </div>
                 <div class="paris-match-box" *ngFor="let resultat of resultatListPaginer ">
                     <div class="match-categorie-container">
                         <div class="categorie-header-box">
